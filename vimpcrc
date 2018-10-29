@@ -1,0 +1,40 @@
+set window directory
+set autoscroll
+set colour
+set incsearch
+set hlsearch
+set searchwrap
+set ignorecase
+set sortignorethe
+set sortignorecase
+set mouse
+"set add next "problem (bug?) with adding in reverse order
+set stoponquit
+set playonadd
+"set local-music-dir ~/Multimedia/Audio/Music
+
+"songformat is for browse
+set sort library
+set songformat {%a - %b - %n - %t}|{%f}$E$R $H[$H%l$H]$H
+set libraryformat {%a - %b - %n.%t}|{%f}$E$R $H[$H%l$H]$H
+"set songformat {%a - %b}$E - %n.%t
+
+map Q :stop<CR>:qall<CR>
+map <C-L> gt
+map <C-H> gT
+
+"map . seek+ 2
+"map , seek- 2
+
+"map gs :shuffle<C-M>
+"map ga :!mpc listall | mpc add<C-M>:shuffle<C-M>
+map gl :library<CR>
+map gp :playlist<CR>
+map gb :browse<C-M>gg/
+map <C-u> :update<CR>
+
+"map @ to switch to add next, add a song, then change back
+map @ :set add next<C-M>a:set add end<C-M>
+
+hi current redbg
+set windows directory,library,browse,playlist

@@ -1,0 +1,27 @@
+conky.config = {
+    alignment='top_left',
+    gap_x = 480,
+    gap_y = 6,
+	maximum_width = 1050,
+    background = true,
+    draw_borders = false,
+    use_xft = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    update_interval = 3600,
+    uppercase = false,
+    double_buffer = false,
+    use_spacer = 'none',
+    draw_shades = false
+}
+
+
+conky.text = [[
+${execp echo '${color Cyan} ${font LCDMono:bold:size=9}======= GCALENDAR ==================='}
+${font DejaVu Sans Mono:size=9}
+#${execp gcalcli --conky --nolineart calw 2}
+${execp gcalcli --conky --nolineart agenda}
+
+]]
+

@@ -1,0 +1,83 @@
+# Navigation
+alias ls='ls --color=auto'
+alias c='clear'
+alias l='ls -lh'
+alias ll='ls -l | less'
+alias d='pushd ~/Desktop; clear; ls -lh'
+alias b='pushd ~/Dropbox; clear; ls -lh'
+alias a='pushd ~/Archive; clear; ls -lh'
+alias i='pushd ~/Inbox; clear; ls -lh'
+alias t='pushd ~/Tmp; clear; ls -lh'
+alias n='pushd /media; clear; ls -lh'
+alias e='exit'
+alias his='history'
+alias h='history | grep'
+alias cl='clear; ls -lh'
+alias sz='du -sh *'
+alias f='vifm'
+alias u='cd ..; clear; ls -lh'
+alias udb='sudo updatedb'
+alias T='tree'
+
+# Edit files
+alias bashalieases='nvim ~/.bash_aliases'
+
+# Tools
+alias pwd2clip='pwd | xclip; pwd | xclip -sel clip'
+alias adblock='sudo hostsblock-urlcheck'
+alias hb='sudo hostsblock'
+alias xdvi='xdvi -s 6'
+alias locate='locate -i'
+alias loc='locate -i'
+alias fd='sudo fdisk -l'
+
+# SSH
+alias toronto='ssh -t gtzanaki@toronto.math.carleton.ca "bash -l"'
+alias turing='ssh -t gtzanaki@turing.math.carleton.ca "bash -l"'
+alias carletonssh='ssh -D 8123 -C -q -N gtzanaki@turing.math.carleton.ca'
+
+if [ $HOSTNAME = "alavanja" ]; then
+    alias sv='sudo nvim'
+    alias v='nvim'
+else
+    alias v='vim'
+fi
+
+# PacMan
+alias pm='sudo pacman'
+alias pmi='sudo pacman -S'
+alias pmr='sudo pacman -Rs'
+alias uu='sudo pacman -Syu'
+
+########## Todo.txt ######################################
+# List:
+alias gtl='clear; todo.sh -d "$TODOSHDIR/todo.cfg" list'
+# Add:
+alias gta='clear; todo.sh -d "$TODOSHDIR/todo.cfg" add'
+# Edit file:
+alias gtf='nvim "$TODOSHDIR/todo.txt"'
+
+alias gc='gcalcli'
+alias gca='gcalcli agenda'
+alias gcw='gcalcli calw 2'
+alias gcm='gcalcli calm'
+alias gcd='gcalcli delete'
+#alias gcq='gcalcli --calendar 'Calendar' quick' #See UsrBin for updated version
+
+guitarpath=~/Applications/Standalone/Python_guitar_practice/
+alias guitarexercises='pushd '$guitarpath';clear; python2 '$guitarpath'Generate_guitar_exercises.py'
+
+#Git
+alias gst='git status'
+alias gl='git log'
+alias gd='git diff'
+alias gb='git branch'
+alias gch='git checkout'
+alias gpo='git push --all origin'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias typo='git commit -am "Fixed a typo"'
+
+
+alias disablescreensave='xset s off -dpms'
+alias disablescreensave='setterm -blank 0 -powerdown 0'

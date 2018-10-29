@@ -1,0 +1,7 @@
+--monday=true
+--military
+--defaultCalendar=Calendar#cyan
+--defaultCalendar=Birthdays#magenta
+--defaultCalendar=Weekly#white
+--defaultCalendar=Bills#brightyellow
+--width=20

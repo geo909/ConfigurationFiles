@@ -1,0 +1,52 @@
+conky.config = {
+    alignment = 'top_left',
+    minimum_height = 8,
+	minimum_width = 5,
+	maximum_width = 1200,
+    draw_borders = false,
+    background = true,
+    gap_x = 15,
+    gap_y = 6,
+    use_xft = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    update_interval =3600,
+    uppercase = false,
+    double_buffer = false,
+    use_spacer = 'none',
+    draw_shades = false
+}
+
+conky.text = [[
+${execp echo '${color Grey} ${font LCDMono:bold:size=9}======= GTD ==================='}
+
+${execp echo '${color palegreen} ${font LCDMono:bold:size=11}@HOME'} 
+${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh home}
+
+#${execp echo '${color orchid} ${font LCDMono:bold:size=11}@SCHOOL'}
+#${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh school}
+
+${execp echo '${color turquoise} ${font LCDMono:bold:size=11}@COMPUTER'}
+${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh computer}
+
+${execp echo '${color Yellow} ${font LCDMono:bold:size=11}CALLS'}
+${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh calls}
+
+${execp echo '${color Green} ${font LCDMono:bold:size=11}CAR'}
+${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh car}
+
+${execp echo '${color Purple} ${font LCDMono:bold:size=11}WAITING FOR'}
+${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh waitingfor}
+
+${execp echo '${color Orange} ${font LCDMono:bold:size=11}AGENDAS'}
+${font DejaVu Sans Mono:size=11}${execp sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh agendas}
+
+#${execp echo '${color White} ${font LCDMono:bold:size=11}WORK ON'} 
+#${font DejaVu Sans Mono:size=11}${exec sh /home/jorge/Dropbox/Applications/Configuration_Files/conky/outputforconky.sh workon}
+
+#${voffset 10}
+${execp echo '${color RoyalBlue1} ${font LCDMono:bold:size=11}~/Inbox'} ${hr 1}
+
+${font DejaVu Sans Mono:size=11}${exec ls ~/Inbox | sed 's/^/\ \ \ /g'}
+]]

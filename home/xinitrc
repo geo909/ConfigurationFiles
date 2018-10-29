@@ -1,0 +1,35 @@
+export GPODDER_HOME=~/.config/gpodder/
+export GPODDER_DOWNLOAD_DIR=~/Multimedia/Audio/Podcasts
+export TERMINAL=lxterminal # For i3-sensible-terminal
+source ~/.profile
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+#redshift-gtk &
+clipit &
+xbindkeys &
+nm-applet &
+dbus-launch dropbox &
+
+# MPD daemon start (if no other user instance exists)
+#[ ! -s ~/.config/mpd/pid ] && mpd
+
+restartconky
+monitorsetup 
+
+xset -b             # to stop annoying beep sound:
+xsetroot -bg black  # black background
+#feh --bg-fill ~/Multimedia/Image/Wallpapers/night_penguins.png
+
+fbxkb & # Keyboard layout tray switcher
+xfce4-power-manager &
+
+#start_jack & 
+exec i3
+#exec startlxde
+
+# Disable touchpad 
+# xinput set-prop 16 "Device Enabled" 0
+
+#exec cinnamon --replace > /dev/null 2>&1 &
+#exec openbox-session

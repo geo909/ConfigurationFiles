@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+
+# save this file as $HOME/.pythonrc.py
+# add `export PYTHONSTARTUP=$HOME/.pythonrc.py` to your .bashrc
+
+import os
+import atexit
+import sys, pprint
+import readline, rlcompleter
+
+histfile = os.path.join(os.path.expanduser("~"), ".pyhist")
+try:
+    readline.read_history_file(histfile)
+except IOError:
+    pass
+
+# for details read `man readline` on linux, `man editline` on OSX
+if sys.platform.startswith('linux'):
+    readline.parse_and_bind("tab: complete")
+elif sys.platform == 'darwin':
+    readline.parse_and_bind("bind ^I rl_complete")
+
+readline.set_history_length(1000)
+
+atexit.register(readline.write_history_file, histfile)
+
+sys.displayhook = pprint.pprint
+
+cl= lambda: os.system('clear')
+#del os, histfile, readline, rlcompleter, atexit, sys, pprint

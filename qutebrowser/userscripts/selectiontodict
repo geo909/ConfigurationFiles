@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "open -t https://translate.google.gr/#auto/el/$QUTE_SELECTED_TEXT" >> "$QUTE_FIFO"
+
