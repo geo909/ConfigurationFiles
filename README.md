@@ -1,8 +1,8 @@
-##TODO:
+## TODO:
 
 Unison profiles
 
-##home
+## home
 
 $HOME/.profile
 $HOME/.xbindkeysrc
@@ -10,13 +10,13 @@ $HOME/.xinitrc
 $HOME/.yaourtrc
 $HOME/.pythonrc.py
 
-##bash
+## bash
 
 $HOME/.bash_aliases
 $HOME/.bash_profile
 $HOME/.bashrc
 
-##Qutebrowser
+## Qutebrowser
 
 $HOME/.config/qutebrowser/config.py
 $HOME/.config/qutebrowser/quickmarks
@@ -24,53 +24,53 @@ $HOME/.config/qutebrowser/bookmarks/urls
 $HOME/.local/share/qutebrowser/greasemonkey
 $HOME/.local/share/qutebrowser/userscripts
 
-##nvim
+## nvim
 
 $HOME/.config/nvim
 
-##vim
+## vim
 
 $HOME/.vimrc
 
-##vifm
+## vifm
 
 $HOME/.vifm/vifmrc
 $HOME/.vifm/colors/jorge.vifm
 
-##i3 
+## i3 
 
 $HOME/.config/i3/config
 $HOME/.config/i3blocks/config
 
-##Redshift
+## Redshift
 
 $HOME/.config/redshift.conf
 
-##Zathura
+## Zathura
 
 $HOME/.config/zathura/zathurarc
 
-##gcalcli
+## gcalcli
 
 $HOME/.gcalclirc
 
-##git
+## git
 
 $HOME/.gitconfig
 
-##mpd
+## mpd
 
 $HOME/.config/mpd/mpd.conf
 
-##vimpc
+## vimpc
 
 $HOME/.vimpcrc
 
-##etc
+## etc
 
 /etc/inputrc
 
-##xorg
+## xorg
 
 /etc/X11/xorg.conf.d/20-intel.conf
 /etc/X11/xorg.conf.d/keyboard.conf
