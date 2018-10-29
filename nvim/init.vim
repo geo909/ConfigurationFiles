@@ -39,6 +39,7 @@ function! Configinit()
     e ~/.config/nvim/init.vim
 endfunction
 nnoremap ,c :w<CR>:call Configinit()<CR>
+nnoremap ,C :call Configinit()<CR>
 nnoremap ,s :w<CR>:source ~/.config/nvim/init.vim<CR>:source ~/.config/nvim/plugin/colours.vim<CR>
 
 " Don't make noise
